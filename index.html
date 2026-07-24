@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Associate Profile</title>
+
+    <title>Business Associate Safety Card</title>
 
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
 
-<div class="container">
+<div class="background">
+
+<div class="card">
+
+    <!-- Header -->
 
     <div class="header">
-        <h2>MAITHON POWER LIMITED</h2>
-        <h3>Business Associate Profile</h3>
-        <p>Safety Department</p>
+
+        <div class="company-name">
+            MAITHON POWER LIMITED
+        </div>
+
+        <div class="card-title">
+            BUSINESS ASSOCIATE
+        </div>
+
+        <div class="card-subtitle">
+            DIGITAL SAFETY CARD
+        </div>
+
+        <div class="verified">
+            <i class="fa-solid fa-circle-check"></i>
+            SAFETY VERIFIED
+        </div>
+
     </div>
+
+
+    <!-- Profile -->
 
     <div class="profile">
 
-        <div class="avatar">
+        <div class="profile-image">
+
             <i class="fa-solid fa-user"></i>
+
         </div>
 
         <h2 id="name">Loading...</h2>
-        <p id="designation"></p>
+
+        <p id="designation">
+            Designation
+        </p>
 
         <span id="status" class="status active">
             ACTIVE
@@ -34,65 +67,213 @@
 
     </div>
 
-    <div class="card">
 
-        <div class="row">
+
+    <!-- Personal Details -->
+
+    <div class="section">
+
+        <div class="section-heading">
+
+            <i class="fa-solid fa-user-shield"></i>
+
+            PERSONAL DETAILS
+
+        </div>
+
+
+        <div class="info-row">
+
             <i class="fa-solid fa-id-card"></i>
+
             <div>
-                <label>Gate Pass No</label>
-                <p id="gatepass"></p>
+
+                <span class="label">
+                    Gate Pass No.
+                </span>
+
+                <span class="value" id="gatepass">
+                    -
+                </span>
+
             </div>
+
         </div>
 
-        <div class="row">
+
+        <div class="info-row">
+
             <i class="fa-solid fa-building"></i>
+
             <div>
-                <label>Department</label>
-                <p id="department"></p>
+
+                <span class="label">
+                    Department
+                </span>
+
+                <span class="value" id="department">
+                    -
+                </span>
+
             </div>
+
         </div>
 
-        <div class="row">
+
+        <div class="info-row">
+
             <i class="fa-solid fa-briefcase"></i>
+
             <div>
-                <label>Designation</label>
-                <p id="designation2"></p>
+
+                <span class="label">
+                    Designation
+                </span>
+
+                <span class="value" id="designation2">
+                    -
+                </span>
+
             </div>
+
         </div>
 
-        <div class="row">
+
+        <div class="info-row">
+
             <i class="fa-solid fa-droplet"></i>
-            <div>
-                <label>Blood Group</label>
-                <p id="blood"></p>
-            </div>
-        </div>
 
-        <div class="row">
-            <i class="fa-solid fa-phone"></i>
             <div>
-                <label>Mobile Number</label>
-                <p id="mobile"></p>
-            </div>
-        </div>
 
-        <div class="row">
-            <i class="fa-solid fa-envelope"></i>
-            <div>
-                <label>Email ID</label>
-                <p id="email"></p>
+                <span class="label">
+                    Blood Group
+                </span>
+
+                <span class="value" id="blood">
+                    -
+                </span>
+
             </div>
+
         </div>
 
     </div>
+
+
+
+    <!-- Contact Details -->
+
+    <div class="section">
+
+        <div class="section-heading">
+
+            <i class="fa-solid fa-address-book"></i>
+
+            CONTACT DETAILS
+
+        </div>
+
+
+        <div class="info-row">
+
+            <i class="fa-solid fa-phone"></i>
+
+            <div>
+
+                <span class="label">
+                    Mobile Number
+                </span>
+
+                <span class="value" id="mobile">
+                    -
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="info-row">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            <div>
+
+                <span class="label">
+                    Email ID
+                </span>
+
+                <span class="value" id="email">
+                    -
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Action Buttons -->
+
+    <div class="actions">
+
+        <a id="callBtn" href="#">
+
+            <i class="fa-solid fa-phone"></i>
+
+            Call
+
+        </a>
+
+        <a id="emailBtn" href="#">
+
+            <i class="fa-solid fa-envelope"></i>
+
+            Email
+
+        </a>
+
+    </div>
+
+
+
+    <!-- Verification -->
+
+    <div class="verification">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        VERIFIED BUSINESS ASSOCIATE
+
+    </div>
+
+
+
+    <!-- Footer -->
 
     <div class="footer">
-        Verified by Safety Department
+
+        <i class="fa-solid fa-triangle-exclamation"></i>
+
+        This Digital Safety Card is issued for
+        identification of Business Associates
+        working inside Maithon Power Limited.
+
+        <br><br>
+
+        Developed for Safety Department
+
     </div>
+
+
+</div>
 
 </div>
 
 <script src="script.js"></script>
 
 </body>
-  </html>
+
+</html>
