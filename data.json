@@ -7,7 +7,8 @@
     "blood": "O+",
     "email": "rgope1988@gmail.com",
     "mobile": "7654301732",
-    "status": "Active"
+    "status": "Active",
+    "image": "images/20351.jpg"
   },
   {
     "gatepass": "20342",
@@ -17,7 +18,8 @@
     "blood": "B+",
     "email": "singhsonu837475@gmail.com",
     "mobile": "8919453105",
-    "status": "Active"
+    "status": "Active",
+    "image": "images/20342.jpg"
   },
   {
     "gatepass": "26558",
@@ -27,7 +29,8 @@
     "blood": "O+",
     "email": "rajkumarbaraura@gmail.com",
     "mobile": "6386341810",
-    "status": "Active"
+    "status": "Active",
+    "image": "images/26558.jpg"
   },
   {
     "gatepass": "",
@@ -37,6 +40,7 @@
     "blood": "O+",
     "email": "azhar.she9@gmail.com",
     "mobile": "9525918633",
-    "status": "Active"
+    "status": "Active",
+    "image": "images/azhar.jpg"
   }
 ]
