@@ -200,6 +200,11 @@ body{
 /* ACTION BUTTONS */
 
 .actions{
+    display:flex;
+    gap:15px;
+    padding:0 18px 18px;
+}
+
 .actions a{
     flex:1;
     display:flex;
@@ -208,7 +213,7 @@ body{
     gap:10px;
     text-align:center;
     text-decoration:none;
-    color:white;
+    color:#fff;
     padding:15px;
     border-radius:12px;
     font-weight:600;
@@ -216,8 +221,17 @@ body{
     box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
+#callBtn{
+    background:#2e7d32;
+}
+
+#emailBtn{
+    background:#1565c0;
+}
+
 .actions a:hover{
     transform:translateY(-3px);
+    opacity:.95;
 }
 
 /* VERIFIED */
