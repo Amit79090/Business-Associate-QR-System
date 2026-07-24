@@ -72,6 +72,8 @@ body{
     text-align:center;
     padding:25px;
     margin-top:-35px;
+    position:relative;
+    z-index:2;
 }
 
 .profile-image{
