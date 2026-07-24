@@ -30,28 +30,29 @@ body{
 /* HEADER */
 
 .header{
-    background:linear-gradient(135deg,#8B0000,#C62828);
-    color:#fff;
+    background:linear-gradient(135deg,#8b0000,#c62828);
+    color:white;
     text-align:center;
-    padding:30px 20px 75px;
+    padding:30px 20px 90px;
     position:relative;
 }
 
 .company-name{
-    font-size:22px;
-    font-weight:bold;
+    font-size:24px;
+    font-weight:700;
     letter-spacing:1px;
 }
 
 .card-title{
+    font-size:20px;
     margin-top:10px;
-    font-size:19px;
     font-weight:700;
 }
 
 .card-subtitle{
-    margin-top:5px;
     font-size:14px;
+    opacity:.95;
+    margin-top:5px;
     letter-spacing:1px;
 }
 
@@ -136,11 +137,11 @@ body{
 /* SECTION */
 
 .section{
-    margin:18px;
-    border-radius:16px;
-    overflow:hidden;
+    margin:20px;
+    border-radius:18px;
     background:white;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
 }
 
 .section-heading{
@@ -157,9 +158,10 @@ body{
 
 .info-row{
     display:flex;
-    gap:15px;
+    gap:16px;
     padding:18px;
-    border-bottom:1px solid #eeeeee;
+    align-items:flex-start;
+    border-bottom:1px solid #eee;
 }
 
 .info-row:last-child{
@@ -167,10 +169,17 @@ body{
 }
 
 .info-row i{
-    font-size:22px;
+    width:42px;
+    height:42px;
+    background:#fff3ef;
+    border-radius:12px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
     color:#d84315;
-    width:28px;
-    margin-top:3px;
+    font-size:18px;
 }
 
 .label{
@@ -203,7 +212,7 @@ body{
 .actions{
     display:flex;
     gap:15px;
-    padding:0 18px 18px;
+    padding:0 20px 20px;
 }
 
 .actions a{
@@ -212,14 +221,19 @@ body{
     justify-content:center;
     align-items:center;
     gap:10px;
-    text-align:center;
-    text-decoration:none;
-    color:#fff;
+
     padding:15px;
-    border-radius:12px;
+
+    border-radius:14px;
+
+    color:white;
+    text-decoration:none;
+
     font-weight:600;
+
     transition:.3s;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
 }
 
 #callBtn{
@@ -232,20 +246,26 @@ body{
 
 .actions a:hover{
     transform:translateY(-3px);
-    opacity:.95;
 }
 
 /* VERIFIED */
 
 .verification{
-    margin:0 18px 18px;
-    background:#e8f5e9;
-    color:#2e7d32;
+    margin:0 20px 20px;
+
     padding:18px;
+
     border-radius:14px;
+
+    background:#e8f5e9;
+
+    color:#2e7d32;
+
     text-align:center;
+
     font-weight:700;
-    font-size:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
 }
 
 .verification i{
@@ -257,13 +277,16 @@ body{
 
 .footer{
     background:#37474f;
-    color:#fff;
-    padding:22px;
-    text-align:center;
-    font-size:13px;
-    line-height:1.8;
-}
+    color:white;
 
+    text-align:center;
+
+    padding:22px;
+
+    line-height:1.8;
+
+    font-size:13px;
+}
 .footer i{
     display:block;
     font-size:22px;
