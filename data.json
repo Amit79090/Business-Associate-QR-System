@@ -1,0 +1,22 @@
+[
+  {
+    "gatepass": "20351",
+    "name": "Ramesh Gope",
+    "department": "KKPC Safety",
+    "designation": "HSE Officer (High Skilled)",
+    "blood": "O+",
+    "email": "rgope1988@gmail.com",
+    "mobile": "7654301732",
+    "status": "Active"
+  },
+  {
+    "gatepass": "20342",
+    "name": "Sonu",
+    "department": "KKPC Safety",
+    "designation": "HSE Officer (Skilled)",
+    "blood": "B+",
+    "email": "singhsonu837475@gmail.com",
+    "mobile": "8919453105",
+    "status": "Active"
+  }
+]
