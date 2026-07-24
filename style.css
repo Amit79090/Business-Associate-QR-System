@@ -66,48 +66,58 @@ body{
     font-weight:bold;
 }
 
-/* PROFILE */
+/* ================= PROFILE ================= */
 
 .profile{
     text-align:center;
     padding:25px;
+    margin-top:-35px;
 }
 
 .profile-image{
-    width:120px;
-    height:120px;
-    border-radius:50%;
-    background:#eeeeee;
+    width:130px;
+    height:130px;
     margin:auto;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:55px;
-    color:#888;
-    border:5px solid white;
-    box-shadow:0 5px 18px rgba(0,0,0,.15);
+    border-radius:50%;
+    overflow:hidden;
+    border:5px solid #fff;
+    background:#ffffff;
+    box-shadow:0 10px 30px rgba(0,0,0,.20);
+}
+
+.profile-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
 }
 
 .profile h2{
-    margin-top:15px;
+    margin-top:16px;
     color:#222;
+    font-size:28px;
+    font-weight:700;
 }
 
 .profile p{
+    margin-top:6px;
     color:#666;
-    margin-top:5px;
+    font-size:16px;
+    font-weight:500;
 }
 
-/* STATUS */
+/* ================= STATUS ================= */
 
 .status{
     display:inline-block;
-    margin-top:15px;
-    padding:8px 26px;
+    margin-top:16px;
+    padding:9px 26px;
     border-radius:30px;
-    color:white;
-    font-weight:bold;
-    letter-spacing:1px;
+    color:#fff;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:.8px;
+    text-transform:uppercase;
 }
 
 .active{
@@ -116,6 +126,10 @@ body{
 
 .expired{
     background:#d32f2f;
+}
+
+.inactive{
+    background:#757575;
 }
 
 /* SECTION */
@@ -173,36 +187,37 @@ body{
     word-break:break-word;
 }
 
+.value a{
+    color:#1565c0;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.value a:hover{
+    text-decoration:underline;
+}
+
 /* ACTION BUTTONS */
 
 .actions{
-    display:flex;
-    gap:15px;
-    padding:0 18px 18px;
-}
-
 .actions a{
     flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
     text-align:center;
     text-decoration:none;
     color:white;
-    padding:14px;
-    border-radius:10px;
-    font-weight:bold;
+    padding:15px;
+    border-radius:12px;
+    font-weight:600;
     transition:.3s;
-}
-
-#callBtn{
-    background:#2e7d32;
-}
-
-#emailBtn{
-    background:#1565c0;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
 }
 
 .actions a:hover{
-    transform:translateY(-2px);
-    opacity:.9;
+    transform:translateY(-3px);
 }
 
 /* VERIFIED */
@@ -211,13 +226,15 @@ body{
     margin:0 18px 18px;
     background:#e8f5e9;
     color:#2e7d32;
-    padding:16px;
-    border-radius:12px;
+    padding:18px;
+    border-radius:14px;
     text-align:center;
-    font-weight:bold;
+    font-weight:700;
+    font-size:15px;
 }
 
 .verification i{
+    font-size:18px;
     margin-right:8px;
 }
 
@@ -225,11 +242,18 @@ body{
 
 .footer{
     background:#37474f;
-    color:white;
-    padding:20px;
+    color:#fff;
+    padding:22px;
     text-align:center;
     font-size:13px;
-    line-height:1.7;
+    line-height:1.8;
+}
+
+.footer i{
+    display:block;
+    font-size:22px;
+    margin-bottom:10px;
+    color:#ffd54f;
 }
 
 /* ANIMATION */
