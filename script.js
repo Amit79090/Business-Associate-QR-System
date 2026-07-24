@@ -1,108 +1,123 @@
+// ===============================
+// Business Associate Safety Card
+// ===============================
+
 // Get Gate Pass Number from URL
 const params = new URLSearchParams(window.location.search);
-const gatePass = params.get("id");
+const gatepass = params.get("id");
 
-// Load JSON Data
-fetch("data.json")
-.then(response => response.json())
+if (!gatepass) {
+
+    document.body.innerHTML = `
+        <h2 style="text-align:center;margin-top:100px;">
+            Invalid QR Code
+        </h2>
+    `;
+
+    throw new Error("Gate Pass Number Missing");
+
+}
+
+// Load JSON
+fetch("./business_associates.json")
+
+.then(response => {
+
+    if (!response.ok) {
+
+        throw new Error("Unable to load business_associates.json");
+
+    }
+
+    return response.json();
+
+})
+
 .then(data => {
 
-    // Find Business Associate
-    const person = data.find(item => item.gatepass == gatePass);
+    const person = data.find(p => p.gatepass === gatepass);
 
     if (!person) {
 
         document.body.innerHTML = `
-        <div style="font-family:Segoe UI;
-                    text-align:center;
-                    margin-top:100px;">
-
-            <h1 style="color:#b71c1c;">
+            <h2 style="text-align:center;margin-top:100px;">
                 Business Associate Not Found
-            </h1>
-
-            <p>
-                Please check the QR Code or Gate Pass Number.
-            </p>
-
-        </div>
+            </h2>
         `;
 
         return;
 
     }
 
-    // Fill Details
+    // Browser Title
+    document.title = person.name + " | Business Associate";
 
-    document.getElementById("name").innerText = person.name;
+    // Photo
+    const photo = document.getElementById("photo");
 
-    document.getElementById("designation").innerText = person.designation;
+    if(photo){
 
-    document.getElementById("designation2").innerText = person.designation;
+        photo.src = person.image || "images/default.jpg";
 
-    document.getElementById("gatepass").innerText = person.gatepass;
+        photo.onerror = function(){
 
-    document.getElementById("department").innerText = person.department;
+            this.src = "images/default.jpg";
 
-    document.getElementById("blood").innerText = person.blood;
+        };
 
-    document.getElementById("mobile").innerText = person.mobile;
+    }
 
-    document.getElementById("email").innerText = person.email;
+    // Personal Details
+    document.getElementById("name").textContent = person.name;
 
+    document.getElementById("designation").textContent = person.designation;
 
-    // Status Badge
+    document.getElementById("designation2").textContent = person.designation;
 
+    document.getElementById("gatepass").textContent = person.gatepass || "-";
+
+    document.getElementById("department").textContent = person.department;
+
+    document.getElementById("blood").textContent = person.blood || "-";
+
+    document.getElementById("mobile").innerHTML =
+        `<a href="tel:${person.mobile}">${person.mobile}</a>`;
+
+    document.getElementById("email").innerHTML =
+        `<a href="mailto:${person.email}">${person.email}</a>`;
+
+    // Status
     const status = document.getElementById("status");
 
-    if(person.status.toLowerCase()=="active"){
+    status.textContent = person.status || "ACTIVE";
 
-        status.innerHTML="🟢 ACTIVE";
+    if ((person.status || "").toLowerCase() === "active") {
 
-        status.classList.remove("expired");
+        status.className = "status active";
 
-        status.classList.add("active");
+    } else {
 
-    }
-
-    else{
-
-        status.innerHTML="🔴 EXPIRED";
-
-        status.classList.remove("active");
-
-        status.classList.add("expired");
+        status.className = "status inactive";
 
     }
 
-
-    // Call Button
-
+    // Buttons
     document.getElementById("callBtn").href =
-    "tel:" + person.mobile;
-
-
-    // Email Button
+        "tel:" + person.mobile;
 
     document.getElementById("emailBtn").href =
-    "mailto:" + person.email;
-
+        "mailto:" + person.email;
 
 })
+
 .catch(error => {
 
     console.error(error);
 
-    document.body.innerHTML=`
-    <div style="font-family:Segoe UI;
-                text-align:center;
-                margin-top:100px;">
-
-        <h2 style="color:red;">
-            Unable to Load Data
+    document.body.innerHTML = `
+        <h2 style="text-align:center;margin-top:100px;">
+            Unable to Load Business Associate Data
         </h2>
-
-    </div>
     `;
 
 });
